@@ -11,20 +11,25 @@ pipeline {
 		sh 'mvn package'
             }
         }
-	stage('Test') {
+	    stage('Test') {
             steps {
                 sh 'mvn test'
             }
         }
-	stage('Deploy') {
+	    stage('Deploy') {
             steps {
                 echo 'Deploy Step'
                 sleep 10
             }
         }
-	stage('Docker') {
+	    stage('Docker') {
             steps {
                 echo 'Image step'
+            }
+        }
+	    stage("create zip file") {
+            steps {
+                echo sh 'zip middlewareScript-$(date +%y%m%d-%H%M%S).zip *  --exclude Jenkinsfile README.md'
             }
         }
     }
