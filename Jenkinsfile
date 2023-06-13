@@ -25,7 +25,9 @@ pipeline {
         }
 	    stage("create zip file") {
             steps {
+                script{
                 echo sh 'zip middlewareScript-$(date +%y%m%d-%H%M%S).zip *  --exclude Jenkinsfile README.md'
+                }
             }
         }
     }
