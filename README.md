@@ -1,2 +1,2 @@
 # middleware_scripts
-..
+.
