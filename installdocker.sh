@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#Author : Dominique
-#Date: 24 Feb 2022
+#Author: Selorm McGarh
+#Date: May 1st, 2019
 
 #This script is made by me to automate downloading docker from video
 
